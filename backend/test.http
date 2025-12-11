@@ -1,0 +1,17 @@
+POST http://localhost:5000/api/entries
+Content-Type: application/json
+
+{
+  "username": "lafoot fellow",
+  "usermail": "lafootfellow@gmail.com"
+}
+
+{
+  "username": "john doe",
+  "usermail": "jd@gmail.com"
+}
+
+{
+  "username": "Mongo bhai",
+  "usermail": "MB@gmail.com"
+}
