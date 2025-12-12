@@ -4,8 +4,12 @@ const Entry = require('../models/Entry'); // Make sure path is correct
 
 // GET all entries
 router.get('/', async (req, res) => {
-  const entries = await Entry.find();
-  res.json(entries);
+  try {
+    const entries = await Entry.find();
+    res.json(entries);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 });
 
 // POST new entry
@@ -26,6 +30,21 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+
+router.put('/:id', async (req, res) => {
+  const { username, usermail } = req.body;
+  try {
+    const updated = await Entry.findByIdAndUpdate(
+      req.params.id,
+      { username, usermail },
+      { new: true }
+    );
+    res.json(updated);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 
 
 module.exports = router;
