@@ -180,7 +180,7 @@ function App() {
         }}
         onClick={openAddDialog}
       >
-        <FaPlus style={{ marginRight: '5px' }} /> Add Admin
+        <FaPlus style={{ marginRight: '5px' }} /> Add User
       </div>
 
       {/* ============== DIALOG BOX ============== */}
