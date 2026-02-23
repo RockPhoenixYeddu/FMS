@@ -14,19 +14,11 @@ require('./connection');
 app.use('/uploads', express.static('uploads'));
 
 // Routes
-const entriesRoute = require('./routes/entries'); // Legacy if you want to keep
-app.use('/api/entries', entriesRoute);
-
 const authRoute = require('./routes/auth');
 app.use('/api/auth', authRoute);
 
 const transactionsRoute = require('./routes/transactions');
 app.use('/api/transactions', transactionsRoute);
-
-// Test route
-app.get('/', (req, res) => {
-  res.send("Backend running");
-});
 
 // Start server
 app.listen(PORT, () => {
