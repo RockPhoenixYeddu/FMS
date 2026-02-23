@@ -1,0 +1,264 @@
+.transactions-page {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-sm {
+    font-size: 0.85rem;
+}
+
+/* Sheet Navigation */
+.sheet-nav {
+    margin-bottom: var(--spacing-lg);
+}
+
+.year-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.year-label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.nav-arrow {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-arrow:hover {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+}
+
+.month-tabs {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.month-tab {
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.month-tab:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--text-primary);
+}
+
+.month-tab.active {
+    background: var(--accent-primary);
+    color: #fff;
+    border-color: var(--accent-primary);
+    font-weight: 600;
+}
+
+/* Export Button */
+.export-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+}
+
+/* Filters */
+.filters-card {
+    margin-bottom: var(--spacing-lg);
+    padding: 15px 20px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.select-filter {
+    width: 200px;
+    max-width: 100%;
+    padding: 8px 12px;
+    background-color: var(--bg-primary);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+}
+
+/* Table Area */
+.table-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.fms-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.fms-table th,
+.fms-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.fms-table th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.th-group {
+    text-align: center !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.fms-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.fms-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.fms-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Amounts */
+.tx-income {
+    color: var(--success);
+}
+
+.tx-expense {
+    color: var(--danger);
+}
+
+/* Badges */
+.badge-outline {
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Proof links */
+.proof-link {
+    color: var(--accent-secondary);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+.proof-link:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Action buttons */
+.action-btn {
+    padding: 6px 10px;
+    border-radius: var(--border-radius-sm);
+    background: transparent;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    color: var(--text-muted);
+}
+
+.delete-btn:hover {
+    color: var(--danger);
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.edit-btn {
+    color: var(--text-muted);
+}
+
+.edit-btn:hover {
+    color: var(--accent-secondary);
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+/* Church Table extras */
+.church-table th {
+    white-space: nowrap;
+}
+
+.church-table tfoot td {
+    border-top: 2px solid var(--border-color);
+    padding: 14px 14px;
+    font-weight: 600;
+}
+
+.totals-row {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.add-row-highlight {
+    background-color: rgba(99, 102, 241, 0.08) !important;
+}
+
+.inline-input {
+    padding: 4px 8px !important;
+    margin: 0 !important;
+    min-width: 60px;
+    max-width: 110px;
+    font-size: 0.85rem;
+    height: 32px;
+}
+
+.inline-file-input {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    max-width: 120px;
+}

@@ -1,0 +1,314 @@
+.dashboard-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.page-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.text-muted {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* Export Button */
+.export-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+}
+
+/* Period Selector Card */
+.period-selector-card {
+    margin-bottom: var(--spacing-xl);
+}
+
+.period-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.view-toggle {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    padding: 8px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toggle-btn.active {
+    background: var(--accent-primary);
+    color: #fff;
+    font-weight: 600;
+}
+
+.toggle-btn:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.period-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-arrow {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-arrow:hover {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+}
+
+.period-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    min-width: 160px;
+    text-align: center;
+}
+
+/* Summary Cards Grid */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid transparent;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.summary-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 2;
+}
+
+.card-data {
+    z-index: 2;
+}
+
+.card-data h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card-data h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+.balance-card {
+    border-left-color: var(--accent-primary);
+}
+
+.balance-card .card-icon {
+    color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.income-card {
+    border-left-color: var(--success);
+}
+
+.income-card .card-icon {
+    color: var(--success);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.expense-card {
+    border-left-color: var(--danger);
+}
+
+.expense-card .card-icon {
+    color: var(--danger);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Main Content Grid */
+.dashboard-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.chart-card h3,
+.recent-tx-card h3 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-data {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Breakdown List */
+.breakdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 10px 0;
+}
+
+.breakdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.breakdown-item strong {
+    margin-left: auto;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Recent Transactions List */
+.recent-tx-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tx-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid transparent;
+    transition: background 0.2s;
+}
+
+.tx-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tx-info h4 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.tx-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.tx-amount {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.tx-amount.income {
+    color: var(--success);
+}
+
+.tx-amount.expense {
+    color: var(--danger);
+}

@@ -1,0 +1,38 @@
+PROBLEM STATEMENT
+
+Managing organisations and Business finances using tools like Excel can quickly become confusing and time-consuming for non-technical users. Manual entry, complex formulas, poor navigation, and lack of visual summaries often lead to mistakes and difficulty in tracking spending patterns.
+SOLUTION
+There is a need for a simple, user-friendly finance management system that allows users to record, view, and analyze their income and expenses without requiring spreadsheet knowledge or technical expertise.
+
+TARGET AUDIENCE
+
+Heads and Admins of Non-Profit Orgs and businesses
+
+
+FEATURES
+
+0) MERN stack, 3 tier MVC Architecture
+1) Admin driven use
+2) Well Detailed Login and Registry with Encryption
+3) User Friendly but powerful and Well organised UI
+4) Automatic Calculations
+5) Flexible PDF print
+6) Detailed Transaction Records with Proofs
+7) Immediate Updates
+8) Add, Edit, Delete, Search
+
+PROS
+
+1) Well Organised
+2) Digitalized Work
+3) Tax benefits
+4) Transparency
+5) High Security
+6) Weighted Proofs
+
+CONS
+
+1) Cant Hide Black money
+2) Needs constant updates to catch up
+3) Initial Costs of Marketing
+

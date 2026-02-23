@@ -8,11 +8,20 @@ app.use(express.json());
 app.use(cors()); // Enable CORS for frontend access
 
 // Connect to MongoDB
-require('./connection');  // Make sure connection.js handles mongoose.connect()
+require('./connection');
+
+// Serve uploaded proofs statically
+app.use('/uploads', express.static('uploads'));
 
 // Routes
-const entriesRoute = require('./routes/entries');
+const entriesRoute = require('./routes/entries'); // Legacy if you want to keep
 app.use('/api/entries', entriesRoute);
+
+const authRoute = require('./routes/auth');
+app.use('/api/auth', authRoute);
+
+const transactionsRoute = require('./routes/transactions');
+app.use('/api/transactions', transactionsRoute);
 
 // Test route
 app.get('/', (req, res) => {
